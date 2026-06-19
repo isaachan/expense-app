@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.env
+*.db
+dev.log
+server.log
+.zscripts/
+skills/
+download/
+bun.lock
+tool-results/

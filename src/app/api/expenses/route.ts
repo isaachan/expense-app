@@ -1,8 +1,9 @@
-import { db } from "@/lib/db";
+import { db, ensureDb } from "@/lib/db";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
+    await ensureDb();
     const expenses = await db.expense.findMany({
       orderBy: { date: "desc" },
     });
@@ -14,6 +15,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    await ensureDb();
     const body = await request.json();
     const { date, amount, category, note } = body;
 

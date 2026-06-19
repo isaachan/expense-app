@@ -1,8 +1,9 @@
-import { db } from "@/lib/db";
+import { db, ensureDb } from "@/lib/db";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   try {
+    await ensureDb();
     const { searchParams } = new URL(request.url);
     const month = searchParams.get("month"); // format: "2026-06"
 

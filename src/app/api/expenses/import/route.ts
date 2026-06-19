@@ -1,9 +1,10 @@
-import { db } from "@/lib/db";
+import { db, ensureDb } from "@/lib/db";
 import { NextResponse } from "next/server";
 import * as XLSX from "xlsx";
 
 export async function POST(request: Request) {
   try {
+    await ensureDb();
     const formData = await request.formData();
     const file = formData.get("file") as File | null;
 

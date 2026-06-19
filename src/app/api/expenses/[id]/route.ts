@@ -1,4 +1,4 @@
-import { db } from "@/lib/db";
+import { db, ensureDb } from "@/lib/db";
 import { NextResponse } from "next/server";
 
 export async function DELETE(
@@ -6,6 +6,7 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    await ensureDb();
     const { id } = await params;
     await db.expense.delete({ where: { id } });
     return NextResponse.json({ success: true });
@@ -19,6 +20,7 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    await ensureDb();
     const { id } = await params;
     const body = await request.json();
     const { date, amount, category, note } = body;

@@ -1,9 +1,10 @@
-import { db } from "@/lib/db";
+import { db, ensureDb } from "@/lib/db";
 import { NextResponse } from "next/server";
 import * as XLSX from "xlsx";
 
 export async function GET() {
   try {
+    await ensureDb();
     const expenses = await db.expense.findMany({ orderBy: { date: "desc" } });
 
     const data = expenses.map((e) => ({

@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://developers.weixin.qq.com/community/minihome/doc/000246877886288129641420b61400",
+    "name": "重新注册激活邮箱又提示该邮箱已被占用 - 微信开放社区",
+    "snippet": "同一个邮箱只能绑定一种微信产品账号类型。页面提示\"邮箱未注册微信开放平台账号\"或\"被占用\"时，说明该邮箱已在其他平台注册使用，需前往对应平台后台登录。",
+    "host_name": "developers.weixin.qq.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.weixin.qq.com/community/develop/doc/000ea077cd8c18425df36f49966400",
+    "name": "邮箱注册公众号注册一半没有继续注册？ - 微信开放社区",
+    "snippet": "出现邮箱被占用无法注册时，需按以下步骤处理：. 确认绑定情况. 检查该邮箱是否已完成公众号注册（登录公众平台查看）; 确认是否绑定过小程序、开放平台等 ...",
+    "host_name": "developers.weixin.qq.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://zhuanlan.zhihu.com/p/499802420",
+    "name": "微信小程序注册邮箱被占用如何解决？ - 知乎专栏",
+    "snippet": "注册微信小程序提示邮箱被占用如何处理？只能更换邮箱账号，邮箱必须是未被微信公众平台注册过的、未被微信开放平台注册、未被个人微信号绑定的邮箱， ...",
+    "host_name": "zhuanlan.zhihu.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.weixin.qq.com/community/minihome/doc/000ecaa8cf4448fd0e74a607561400",
+    "name": "注册公众号显示“该邮箱已被占用”怎么回事？ - 微信开放社区",
+    "snippet": "注册公众号显示“该邮箱已被占用”怎么回事? 输入你注册公众号流程中填写的邮箱、密码登录,按照页面提示重新提交资料注册就行。",
+    "host_name": "developers.weixin.qq.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.weixin.qq.com/community/develop/doc/0006ea7b9f0eb0c4c0792e5325b009?highLine=%28Q.640.40.50%29openAi%25E8%25B4%25A6%25E5%258F%25B7%25E9%2594%2580%25E5%2594%25AE%25E4%25B8%25AD%25E5%25BF%2583%25E2%259C%2594%25EF%25B8%258F%25E3%2580%258C%2520xiaohaola.com%2520%25E3%2580%258D%25E5%259C%25A8%25E7%25BA%25BF%25E8%2587%25AA%25E5%258A%25A9%25E4%25B8%258B%25E5%258D%2595%25E9%2582%25AE%25E7%25AE%25B1%25E5%258F%2591%25E8%25B4%25A7%252C%25E8%25B4%25A8%25E4%25BF%259D90%25E5%25A4%25A9%25E5%258F%25AF%25E5%2585%258D%25E8%25B4%25B9%25E6%258D%25A2%25E5%258F%25B7%252C%25E2%259C%2594%25EF%25B8%258F%25E3%2580%258C%2520xiaohaola.com%2520%25E3%2580%258D%25E5%2594%25AE%25E5%2590%258E%25E4%25BF%259D%25E9%259A%259C6%25E4%25B8%25AA%25E6%259C%2588&page=6",
+    "name": "置顶- 公众号注册提示“邮箱已被占用”该怎么办？官方 - 微信开放社区",
+    "snippet": "1、公众号注册提示“该邮箱已被占用，请更换其他邮箱” 请检查核实您所输入的邮箱是否绑定以下其中一种帐号：1）已绑定开放平台的邮箱；2）已绑定个人微信的 ...",
+    "host_name": "developers.weixin.qq.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://zhuanlan.zhihu.com/p/192545282",
+    "name": "公众号`小程序注册提示“邮箱已被占用”该怎么办？ - 知乎专栏",
+    "snippet": "注册提示“该邮箱已被占用,请更换其他邮箱” 请检查核实您所输入的邮箱是否绑定以下其中一种帐号: 1)已绑定开放平台的邮箱; 2)已绑定个人微信的邮箱",
+    "host_name": "zhuanlan.zhihu.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.gongrenapp.com/a/5763.html",
+    "name": "微信小程序邮箱被占用的解决方法- 向上走科技",
+    "snippet": "一、找回账号. 如果确认该邮箱无法找回或不再使用，或者不希望使用当前邮箱注册微信小程序，可以选择更换一个新的邮箱地址进行注册。 · 二、更换邮箱. 如果确认该邮箱无法找回 ...",
+    "host_name": "www.gongrenapp.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.weixin.qq.com/community/develop/doc/0002607779cfb01ba0bbd3c785b000",
+    "name": "无法登录微信开放平台该邮箱帐号不存在，请重新输入",
+    "snippet": "经核实该邮箱未注册微信开放平台，注册微信开放平台，需填写未曾被微信开放平台注册、未曾被微信公众平台注册、未曾被小程序注册、未曾被微信私人帐号绑定的 ...",
+    "host_name": "developers.weixin.qq.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tp-shop.cn/news_6164.html",
+    "name": "小程序商城-注册公众号时提示“邮箱已被占用”该怎么办？丨tpshop",
+    "snippet": "注册提示“该邮箱已被占用,请更换其他邮箱” 请检查核实您所输入的邮箱是否绑定以下其中一种帐号: 第一个原因:已绑定开放平台的邮箱",
+    "host_name": "www.tp-shop.cn",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.sohu.com/a/794488480_100150288",
+    "name": "公众号注册提示“邮箱已被占用” 应该怎么解决 - 搜狐",
+    "snippet": "检查已绑定的账户登录微信公众平台，检查您的邮箱是否已经绑定到现有的微信产品上。 · 解绑邮箱如果您愿意放弃之前绑定的产品，可以尝试解绑邮箱。 · 注册新 ...",
+    "host_name": "www.sohu.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

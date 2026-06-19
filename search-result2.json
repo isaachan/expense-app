@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://open.weixin.qq.com",
+    "name": "微信开放平台",
+    "snippet": "接入微信开放平台，让你的移动应用支持微信分享、微信收藏和微信支付。 了解更多. 网站应用开发: 接入微信开放平台，让你的网站支持使用微信账号来登录: 了解更多. 公众账号 ...",
+    "host_name": "open.weixin.qq.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://open.weixin.qq.com/frame?lang=zh_CN&t=home/web_tmpl",
+    "name": "网站应用开发 - 微信开放平台",
+    "snippet": "易迅网通过接入网站应用开发，为用户提供了微信登录功能，降低了注册门槛，并可在用户授权后，获取用户基本信息，包括头像、昵称、性别、地区。出于安全考虑，网站应用的微信登录 ...",
+    "host_name": "open.weixin.qq.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.authing.cn/v2/guides/wechat-ecosystem/wechat-web-app.html",
+    "name": "当你使用网页端微信应用进行开发 - Authing 文档",
+    "snippet": "完成微信开放平台的账号注册后，你需要在账号中心填写开发者资质认证申请，并等待认证通过。 ¶ 上线你的网站应用. ¶ 第一步：创建网站应用. 登录你的微信开放 ...",
+    "host_name": "docs.authing.cn",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://zhuanlan.zhihu.com/p/1919391786469688069",
+    "name": "微信登录之创建网站应用 - 知乎专栏",
+    "snippet": "拥有已认证的微信开放平台账号（可参考文章《微信登录之开发者资质申请指南》）; 有备案的HTTPS 网站域名（含ICP 备案号），注意网站需使用个体户或企业备案; 具备服务器端接口 ...",
+    "host_name": "zhuanlan.zhihu.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.weixin.qq.com",
+    "name": "微信开放社区: 小程序交流专区",
+    "snippet": "你好，对公户名不一致/无法使用对公打款验证注销，支持提交无对公账户注销申请，注销入口：登录账号后台-设置与开发-账号设置-账号详情-注销账号-填写对公账号字段下方有“无对 ...",
+    "host_name": "developers.weixin.qq.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html",
+    "name": "微信登录功能/ 网站应用微信登录开发指南 - 微信开放社区",
+    "snippet": "网站应用微信登录是基于OAuth2.0协议标准构建的微信OAuth2.0授权登录系统。 在进行微信OAuth2.0授权登录接入之前，在微信开放平台注册开发者账号，并拥有一个已审核通过的 ...",
+    "host_name": "developers.weixin.qq.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.csdn.net/m0_57033755/article/details/134751931",
+    "name": "微信扫码登录的两种方式：利用微信开放平台 - CSDN博客",
+    "snippet": "1.首先我们要做的就是进入到微信开放平台申请一个开放平台账户，获得资质！ (1) 支持企业类型（以前只支持企业注册） · 2. 申请网站应用名称。 · 3. 设置回调 ...",
+    "host_name": "blog.csdn.net",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.weixin.qq.com/community/business/doc/000200772f81508894e94ec965180d",
+    "name": "小程序注册指引 - 微信开放社区",
+    "snippet": "1）登录公众号-小程序-小程序管理-添加-快速注册并认证 · 2）同意协议 · 3）管理员扫码确认 · 4）勾选需要的资质 · 注：复用公众号认证资质不需要再次提交审核费，也 ...",
+    "host_name": "developers.weixin.qq.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cnblogs.com/0201zcr/p/5133062.html",
+    "name": "微信开放平台开发——网页微信扫码登录（OAuth2.0） - 博客园",
+    "snippet": "在进行微信OAuth2.在进行微信OAuth2.0授权登录接入之前，在微信开放平台注册开发者 ... 3.3、开发者资质认证. 由于我们这里要使用微信登录的接口，所以 ...",
+    "host_name": "www.cnblogs.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://juejin.cn/post/7408800639223169078",
+    "name": "web端接入第三方微信登录 - 稀土掘金",
+    "snippet": "微信开放平台中注册开发者账号，在管理中心选择网站应用，创建相关应用。按照要求准备好资料，提交审核即可，一般2天左右就会有审核结果。",
+    "host_name": "juejin.cn",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

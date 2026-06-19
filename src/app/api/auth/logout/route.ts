@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSession, removeSession } from "@/lib/db";
+import { removeSession } from "@/lib/db";
 import { cookies } from "next/headers";
 
 export async function POST() {

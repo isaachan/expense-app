@@ -27,25 +27,17 @@ export async function ensureDb() {
         "updatedAt" TIMESTAMP(3) NOT NULL
       );
     `)
-    await db.$executeRawUnsafe(`
-      CREATE TABLE IF NOT EXISTS "WhitelistUser" (
-        "openid" TEXT NOT NULL PRIMARY KEY,
-        "nickname" TEXT NOT NULL DEFAULT '',
-        "avatar" TEXT NOT NULL DEFAULT '',
-        "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
-      );
-    `)
     globalForPrisma.dbInitialized = true
   } catch (error) {
     console.error('Failed to ensure database tables:', error)
   }
 }
 
-// Simple session store (in-memory, works for single instance)
-const sessions = new Map<string, { openid: string; nickname: string; avatar: string }>()
+// Simple in-memory session store
+const sessions = new Map<string, { role: string }>()
 
-export function setSession(token: string, user: { openid: string; nickname: string; avatar: string }) {
-  sessions.set(token, user)
+export function setSession(token: string, data: { role: string }) {
+  sessions.set(token, data)
 }
 
 export function getSession(token: string) {

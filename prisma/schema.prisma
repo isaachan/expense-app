@@ -17,3 +17,19 @@ model Expense {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model InviteCode {
+  id        String   @id @default(cuid())
+  code      String   @unique
+  note      String   @default("")
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  usedCount Int      @default(0)
+}
+
+model OperationLog {
+  id        String   @id @default(cuid())
+  action    String
+  detail    String   @default("")
+  createdAt DateTime @default(now())
+}

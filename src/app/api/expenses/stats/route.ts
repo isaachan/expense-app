@@ -1,11 +1,24 @@
-import { db, ensureDb } from "@/lib/db";
+import { db, ensureDb, getSession } from "@/lib/db";
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+
+async function requireAuth() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("session")?.value;
+  if (!token || !getSession(token)) {
+    return null;
+  }
+  return true;
+}
 
 export async function GET(request: Request) {
+  if (!(await requireAuth())) {
+    return NextResponse.json({ error: "未登录" }, { status: 401 });
+  }
   try {
     await ensureDb();
     const { searchParams } = new URL(request.url);
-    const month = searchParams.get("month"); // format: "2026-06"
+    const month = searchParams.get("month");
 
     let startDate: Date;
     let endDate: Date;
@@ -27,7 +40,6 @@ export async function GET(request: Request) {
       orderBy: { date: "desc" },
     });
 
-    // Category breakdown
     const categoryMap = new Map<string, number>();
     let totalAmount = 0;
     let dailyMap = new Map<string, number>();

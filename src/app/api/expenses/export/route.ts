@@ -1,8 +1,21 @@
-import { db, ensureDb } from "@/lib/db";
+import { db, ensureDb, getSession, addLog } from "@/lib/db";
 import { NextResponse } from "next/server";
 import * as XLSX from "xlsx";
+import { cookies } from "next/headers";
+
+async function requireAuth() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("session")?.value;
+  if (!token || !getSession(token)) {
+    return null;
+  }
+  return true;
+}
 
 export async function GET() {
+  if (!(await requireAuth())) {
+    return NextResponse.json({ error: "未登录" }, { status: 401 });
+  }
   try {
     await ensureDb();
     const expenses = await db.expense.findMany({ orderBy: { date: "desc" } });
@@ -18,10 +31,11 @@ export async function GET() {
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "账目");
 
-    // Set column widths
     ws["!cols"] = [{ wch: 14 }, { wch: 12 }, { wch: 12 }, { wch: 30 }];
 
     const buffer = XLSX.write(wb, { type: "buffer", bookType: "xlsx" });
+
+    await addLog("EXPORT", `导出 Excel, 共 ${expenses.length} 条`);
 
     return new NextResponse(buffer, {
       headers: {

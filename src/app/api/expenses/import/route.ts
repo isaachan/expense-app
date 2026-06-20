@@ -1,8 +1,21 @@
-import { db, ensureDb } from "@/lib/db";
+import { db, ensureDb, getSession, addLog } from "@/lib/db";
 import { NextResponse } from "next/server";
 import * as XLSX from "xlsx";
+import { cookies } from "next/headers";
+
+async function requireAuth() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("session")?.value;
+  if (!token || !getSession(token)) {
+    return null;
+  }
+  return true;
+}
 
 export async function POST(request: Request) {
+  if (!(await requireAuth())) {
+    return NextResponse.json({ error: "未登录" }, { status: 401 });
+  }
   try {
     await ensureDb();
     const formData = await request.formData();
@@ -47,6 +60,8 @@ export async function POST(request: Request) {
       });
       imported++;
     }
+
+    await addLog("IMPORT", `导入 Excel: 成功 ${imported} 条, 跳过 ${skipped} 条`);
 
     return NextResponse.json({ imported, skipped });
   } catch (error) {

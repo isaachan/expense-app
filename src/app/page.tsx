@@ -4,12 +4,13 @@ import { useEffect, useState, useCallback } from "react";
 import { ExpenseForm } from "@/components/expense/expense-form";
 import { ExpenseList } from "@/components/expense/expense-list";
 import { ExpenseReport } from "@/components/expense/expense-report";
+import { AdminPanel } from "@/components/admin/admin-panel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { Receipt, List, BarChart3, LogOut, Loader2, KeyRound } from "lucide-react";
+import { Receipt, List, BarChart3, LogOut, Loader2, KeyRound, Shield } from "lucide-react";
 
 type AuthState = "loading" | "authenticated" | "not_authenticated" | "error";
 
@@ -138,18 +139,22 @@ export default function Home() {
 
       <main className="flex-1 max-w-lg mx-auto w-full px-4 py-4">
         <Tabs defaultValue="add" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-4">
-            <TabsTrigger value="add" className="gap-1.5">
+          <TabsList className="grid w-full grid-cols-4 mb-4">
+            <TabsTrigger value="add" className="gap-1.5 text-xs sm:text-sm">
               <Receipt className="h-3.5 w-3.5" />
               记账
             </TabsTrigger>
-            <TabsTrigger value="list" className="gap-1.5">
+            <TabsTrigger value="list" className="gap-1.5 text-xs sm:text-sm">
               <List className="h-3.5 w-3.5" />
               明细
             </TabsTrigger>
-            <TabsTrigger value="report" className="gap-1.5">
+            <TabsTrigger value="report" className="gap-1.5 text-xs sm:text-sm">
               <BarChart3 className="h-3.5 w-3.5" />
               报表
+            </TabsTrigger>
+            <TabsTrigger value="admin" className="gap-1.5 text-xs sm:text-sm">
+              <Shield className="h-3.5 w-3.5" />
+              管理
             </TabsTrigger>
           </TabsList>
 
@@ -164,14 +169,12 @@ export default function Home() {
           <TabsContent value="report">
             <ExpenseReport />
           </TabsContent>
+
+          <TabsContent value="admin">
+            <AdminPanel />
+          </TabsContent>
         </Tabs>
       </main>
-
-      <footer className="mt-auto border-t">
-        <div className="max-w-lg mx-auto px-4 py-3 text-center text-xs text-muted-foreground">
-          已登录
-        </div>
-      </footer>
     </div>
   );
 }

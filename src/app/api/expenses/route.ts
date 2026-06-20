@@ -1,7 +1,20 @@
-import { db, ensureDb } from "@/lib/db";
+import { db, ensureDb, addLog, getSession } from "@/lib/db";
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+
+async function requireAuth() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("session")?.value;
+  if (!token || !getSession(token)) {
+    return null;
+  }
+  return true;
+}
 
 export async function GET() {
+  if (!(await requireAuth())) {
+    return NextResponse.json({ error: "未登录" }, { status: 401 });
+  }
   try {
     await ensureDb();
     const expenses = await db.expense.findMany({
@@ -14,6 +27,9 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  if (!(await requireAuth())) {
+    return NextResponse.json({ error: "未登录" }, { status: 401 });
+  }
   try {
     await ensureDb();
     const body = await request.json();
@@ -31,6 +47,8 @@ export async function POST(request: Request) {
         note: note || "",
       },
     });
+
+    await addLog("CREATE_EXPENSE", `新增: ${date} ${amount}元 [${category}] ${note || ""}`);
 
     return NextResponse.json(expense, { status: 201 });
   } catch (error) {
